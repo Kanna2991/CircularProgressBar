@@ -1,0 +1,19 @@
+.padding{
+	padding: 10px;
+}
+
+.reportForm{
+	width: 50%;
+}
+
+.bar_border, .bar_container{
+	width: 150px;
+    height: 150px;
+}
+
+.bar_circle{
+	top: 6px;
+    left: 6px;
+    width: 138px;
+    height: 138px;
+}

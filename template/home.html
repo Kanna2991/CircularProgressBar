@@ -1,0 +1,32 @@
+<div class="container">
+	<h1 class="text-center">Report Activity</h1>
+	<div class="row">
+	<div class="col-xs-6 col-xs-offset-3">
+		<form name="activityForm" ng-submit="saveActivity()">
+			<div class="form-group">
+				<label class="control-label">Name :</label>
+				<input type="text" class="form-control" maxlength="32" placeholder="Your name" name="name" ng-model="user.name" required>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Activity in percentage :</label>
+				<input type="text" class="form-control" maxlength="3" placeholder="Report in numbers(1-100)" name="score" ng-model="user.score" numeric-only required>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Start Date :</label>
+				<input type="date" class="form-control" name="start" ng-model="user.startDate" placeholder="dd/mm/yyyy" min="2013-01-01" max="{{todayDate}}" required/>
+			</div>
+			<div class="form-group">
+				<label class="control-label">End Date :</label>
+				<input type="date" class="form-control" name="end" ng-model="user.endDate" placeholder="dd/mm/yyyy" min="{{user.startDate}}" max="{{todayDate}}" required/>
+			</div>
+			<div class="padding text-center">
+				<button class="btn btn-primary" type="submit">Submit <span ng-show=loading><i class="fa fa-spinner fa-spin fa-fw"></i></span></button>
+			</div>
+			<div class="padding text-center">
+				<p class="text-danger" ng-show="errorMsg">**{{errorMsg}}</p>
+			</div>
+		</form>
+
+	</div>
+	</div>
+</div>
